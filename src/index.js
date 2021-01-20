@@ -8,6 +8,7 @@ const ramenName = document.querySelector('.name')
 const ramenRestaurant = document.querySelector('.restaurant')
 const ramenComment = document.querySelector('#comment')
 const ramenFormRating = document.querySelector('#rating')
+const newRamenForm = document.querySelector('#new-ramen')
 
 
 fetch('http://localhost:3000/ramens')
@@ -23,6 +24,7 @@ fetch('http://localhost:3000/ramens')
           `
       });
   }
+
 
 
   ramenMenu.addEventListener('click', function(e) {
@@ -70,4 +72,60 @@ fetch('http://localhost:3000/ramens')
       .then(response => response.json())
       .then(data => console.log(data))
   }
+
+
+
+
+
+  //////// ADVANCED DELIVERABLES /////////////////
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    fetch('http://localhost:3000/ramens/1')
+    .then(response => response.json())
+    .then(data => populateFirstRamen(data));
+});
+
+
+function populateFirstRamen(data) {
+    ramenDetailImage.src = data.image
+      ramenName.innerText = data.name
+      ramenRestaurant.innerText = data.restaurant
+      ramenComment.innerText = data.comment
+      ramenComment.dataset.id = data.id
+      ramenFormRating.value = data.rating
+}
+
+newRamenForm.addEventListener('submit', function(e) {
+    e.preventDefault()
+      newRamenName = e.target.name.value
+      newRamenRestaurant = e.target.restaurant.value
+      newRamenRating = e.target.rating.value
+      newRamenImage = e.target.image.value
+      newRamenComment = e.target.new-comment.value
+
+      newRamenObj = {
+          name: newRamenName,
+          restaurant: newRamenRestaurant,
+          image: newRamenImage,
+          rating: newRamenRating,
+          comment: newRamenComment 
+      }
+
+      postNewRamen(newRamenObj)
+})
+
+
+function postNewRamen(ramenObject) {
+    fetch('http://localhost:3000/ramens', {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(ramenObject),
+        })
+        .then(response => response.json())
+        .then(data => {
+        console.log('Success:', data);
+        })
+}
 
