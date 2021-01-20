@@ -5,32 +5,24 @@
       "name": "Shoyu Ramen",
       "restaurant": "Nonono",
       "image": "./assets/ramen/shoyu.jpg",
-      "rating": "10",
-      "comment": "Actually I change my mind this is quite possibly the best ramen I have ever had in my life"
+      "rating": "1",
+      "comment": "One second thought im not a huge fan"
     },
     {
       "id": 3,
       "name": "Nirvana Shiromaru",
       "restaurant": "Ippudo",
       "image": "./assets/ramen/nirvana.jpg",
-      "rating": "7",
-      "comment": "Do buy the hype."
+      "rating": 3,
+      "comment": "Do not buy that hype"
     },
     {
       "id": 4,
       "name": "Gyukotsu Ramen",
       "restaurant": "Za-Ya Ramen",
       "image": "./assets/ramen/gyukotsu.jpg",
-      "rating": "4",
-      "comment": "this is good"
-    },
-    {
-      "id": 5,
-      "name": "Kojiro Red Ramen",
-      "restaurant": "Ramen-Ya",
-      "image": "./assets/ramen/kojiro.jpg",
-      "rating": "1",
-      "comment": "made me ill"
+      "rating": 1,
+      "comment": "not so good"
     }
   ]
 }
