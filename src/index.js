@@ -38,6 +38,7 @@ fetch('http://localhost:3000/ramens')
       ramenDetailImage.src = data.image
       ramenName.innerText = data.name
       ramenRestaurant.innerText = data.restaurant
+      ramenRestaurant.dataset.id = data.id
       ramenComment.innerText = data.comment
       ramenComment.dataset.id = data.id
       ramenFormRating.value = data.rating
@@ -51,6 +52,7 @@ fetch('http://localhost:3000/ramens')
       newRating = e.target.rating.value
       newComment = e.target.comment.value
       ramenId = e.target.comment.dataset.id
+
       const updatedRatingObj = {
         rating: newRating,
         comment: newComment,
@@ -129,3 +131,17 @@ function postNewRamen(ramenObject) {
         })
 }
 
+ramenRestaurant.addEventListener('click', function(e) {
+    let parsedID = parseInt(e.target.dataset.id)
+    deleteRamen(parsedID)
+})
+
+
+
+function deleteRamen(ID) {
+    fetch(`http://localhost:3000/ramens/${ID}`, {
+        method: 'DELETE',
+        headers: {'Content-Type': 'application/json'},
+    })
+    .then(console.log('Ramen deleted'))
+}
