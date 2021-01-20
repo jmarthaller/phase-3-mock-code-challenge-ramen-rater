@@ -5,8 +5,8 @@
       "name": "Shoyu Ramen",
       "restaurant": "Nonono",
       "image": "./assets/ramen/shoyu.jpg",
-      "rating": 7,
-      "comment": "Delish. Can't go wrong with a classic!"
+      "rating": "10",
+      "comment": "Actually I change my mind this is quite possibly the best ramen I have ever had in my life"
     },
     {
       "id": 2,
@@ -29,8 +29,8 @@
       "name": "Gyukotsu Ramen",
       "restaurant": "Za-Ya Ramen",
       "image": "./assets/ramen/gyukotsu.jpg",
-      "rating": 8,
-      "comment": "Good to the last drop."
+      "rating": "4",
+      "comment": "this is good"
     },
     {
       "id": 5,
