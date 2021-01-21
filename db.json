@@ -21,8 +21,8 @@
       "name": "Gyukotsu Ramen",
       "restaurant": "Za-Ya Ramen",
       "image": "./assets/ramen/gyukotsu.jpg",
-      "rating": 1,
-      "comment": "not so good"
+      "rating": "7",
+      "comment": "it's pretty good"
     }
   ]
 }
